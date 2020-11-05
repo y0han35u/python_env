@@ -1,0 +1,18 @@
+version: '3.2'
+
+services:
+        python3:
+                build: .
+                container_name: 'python3'
+                working_dir: '/usr/src/atcoder'
+                volumes:
+                        - type: bind
+                          source: ./src
+                          target: /usr/src/atcoder
+
+                stdin_open: true
+                tty: true
+                command: /bin/bash
+
+
+
